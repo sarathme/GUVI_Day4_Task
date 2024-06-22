@@ -11,7 +11,7 @@ in console.
 
 ### Question 1b (Convert all the strings to title caps in a string array).
 
-```
+```js
 1 - Created a function called titleCaps which accepts an string array(arr).
 
 2 - Loop through the array(arr).
@@ -30,6 +30,15 @@ two or more words.
 4d - Repeat the same for each word in the strArr.
 
 4e - Replace the converted string in the position.
+
+
+if (strArr.length > 1) {
+            for (var j = 0; j < strArr.length; j++) {
+              var firstLet = strArr[j].substring(0, 1).toUpperCase();
+              strArr[j] = firstLet1 + strArr[j].substring(1);
+            }
+            arr[i] = strArr.join(" ");
+          }
 
 5 - If Step 4 in false, then the string is a single word element, if so do the steps 4a, 4b and 4c.
 
