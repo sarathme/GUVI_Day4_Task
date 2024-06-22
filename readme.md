@@ -12,24 +12,24 @@ in console.
 ### Question 1b (Convert all the strings to title caps in a string array).
 
 ```js
-1 - Created a function called titleCaps which accepts an string array(arr).
+//1 - Created a function called titleCaps which accepts an string array(arr).
 
-2 - Loop through the array(arr).
+//2 - Loop through the array(arr).
 
-3 - Split each element using a space pattern(strArr).
+//3 - Split each element using a space pattern(strArr).
 
-4 - Check the if the length of the strArr is greater than 1 (i.e) the string has
+//4 - Check the if the length of the strArr is greater than 1 (i.e) the string has
 two or more words.
 
-4a - If step -4 is true, then loop through the strArr as it contains more than 1 word,
+//4a - If step -4 is true, then loop through the strArr as it contains more than 1 word,
 
-4b - Get the first letter (firstLet) using String substring method and covert to uppercase (toUpperCase method).
+//4b - Get the first letter (firstLet) using String substring method and covert to uppercase (toUpperCase method).
 
-4c - Then concatinate the capitalized first letter with the remaining characters in the word.
+//4c - Then concatinate the capitalized first letter with the remaining characters in the word.
 
-4d - Repeat the same for each word in the strArr.
+//4d - Repeat the same for each word in the strArr.
 
-4e - Replace the converted string in the position.
+//4e - Replace the converted string in the position.
 
 
 if (strArr.length > 1) {
@@ -40,8 +40,8 @@ if (strArr.length > 1) {
             arr[i] = strArr.join(" ");
           }
 
-5 - If Step 4 in false, then the string is a single word element, if so do the steps 4a, 4b and 4c.
+//5 - If Step 4 in false, then the string is a single word element, if so do the steps 4a, 4b and 4c.
 
-6 - Replace the string in arr with its corresponding position.
+//6 - Replace the string in arr with its corresponding position.
 
 ```
