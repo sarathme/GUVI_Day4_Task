@@ -7,6 +7,170 @@
     <title>FSD61WD-T Sarasraman Day 4 Task</title>
   </head>
   <body>
-    <h1></h1>
+    <script>
+      var printOdd = function (arr) {
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 !== 0) {
+            console.log(arr[i]);
+          }
+        }
+      };
+
+      function sumArr(arr) {
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum;
+      }
+
+      function titleCaps(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          var strArr = arr[i].split(" ");
+          if (strArr.length > 1) {
+            for (var j = 0; j < strArr.length; j++) {
+              var firstLet1 = strArr[j].substring(0, 1).toUpperCase();
+              strArr[j] = firstLet1 + strArr[j].substring(1);
+            }
+            arr[i] = strArr.join(" ");
+          } else {
+            var firstLet = arr[i].substring(0, 1).toUpperCase();
+            arr[i] = firstLet + arr[i].substring(1);
+          }
+        }
+        console.log(arr);
+      }
+
+      function filterPrime(arr) {
+        var res = [];
+        for (var i = 0; i < arr.length; i++) {
+          var isPrime = true;
+
+          for (var j = 2; j < arr[i]; j++) {
+            if (arr[i] % j === 0) {
+              isPrime = false;
+              break;
+            }
+          }
+          if (arr[i] > 1) {
+            if (isPrime) {
+              res.push(arr[i]);
+            }
+          }
+        }
+        return res;
+      }
+
+      function palindrome(arr) {
+        var res = [];
+        for (var i = 0; i < arr.length; i++) {
+          var lower = arr[i].toLowerCase();
+          var reverse = "";
+          for (var j = lower.length - 1; j >= 0; j--) {
+            reverse += lower[j];
+          }
+          if (lower === reverse) {
+            res.push(arr[i]);
+          }
+        }
+        return res;
+      }
+
+      function removeDuplicates(arr) {
+        var res = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (res.indexOf(arr[i]) === -1) {
+            res.push(arr[i]);
+          }
+        }
+
+        return res;
+      }
+
+      function rotateArr(arr, k) {
+        var n = arr.length;
+        var k = k % n;
+
+        for (var i = n - k, j = n - 1; i < j; i++, j--) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+
+        for (var i = 0, j = n - k - 1; i < j; i++, j--) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        for (var i = 0, j = n - 1; i < j; i++, j--) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+
+      console.log(
+        "-----------------------------Question 1--------------------------------------"
+      );
+      console.log(
+        "-----------------------------Question 1-a--------------------------------------"
+      );
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      printOdd(arr);
+      console.log(
+        "-----------------IIFE - Question 1-a--------------------------------------"
+      );
+      (function (arr) {
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 !== 0) {
+            console.log(arr[i]);
+          }
+        }
+      })(arr);
+      console.log(
+        "-----------------------------Question 1-b--------------------------------------"
+      );
+      var strArr1 = ["lamkmaf kdamf", "daxfcdfa", "askdni dinvki"];
+      titleCaps(strArr1);
+      console.log(
+        "-----------------------------Question 1-c--------------------------------------"
+      );
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      console.log(sumArr(arr));
+
+      console.log(
+        "-----------------------------Question 1-c IIFE--------------------------------------"
+      );
+      console.log(
+        (function (arr) {
+          var sum = 0;
+          for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+          }
+          return sum;
+        })(arr)
+      );
+      console.log(
+        "-----------------------------Question 1-d--------------------------------------"
+      );
+      console.log(filterPrime(arr));
+      console.log(
+        "-----------------------------Question 1-e--------------------------------------"
+      );
+      var arrStr = ["Level", "Ink", "Racecar"];
+      console.log(palindrome(arrStr));
+      console.log(
+        "-----------------------------Question 1-g--------------------------------------"
+      );
+
+      var arrDuplicates = [1, 5, 8, 9, 9, 7, 4, 2, 1, 3];
+      console.log(removeDuplicates(arrDuplicates));
+
+      console.log(
+        "-----------------------------Question 1-h--------------------------------------"
+      );
+      rotateArr(arr, 2);
+      console.log(arr);
+    </script>
   </body>
 </html>
