@@ -63,5 +63,52 @@ two or more words.
 
 3 - Loop through the array (arr), Initialize a variable isPrime with true.
 
-4 -
+3a - Find if each element in the array is divisible by any of its previous number using a for loop. If so set the isPrime variable to true and break out of the loop.
+
+3b - If the previous loop ends the isPrime variable will be the indicator if an element in the array is prime or not.
+
+3c - Check if the element is greater than 1 if so then check the isPrime variable if it is true then add the element to the res array.
+
+4 - After the main loop return the res array.
+
+```
+
+### Quwstion 1e (Return all the palindromes in an array).
+
+```
+1 - Created function and assigned it to  avariable palindrome.
+
+2 - Initialize a variable (res) with an empty array.
+
+3 - Loop through the array elements using for loop.
+
+3a - Convert each element to a lowercased string and stored inside a variable (lower). Initialize a variable (reverse) as an empty string.
+
+3b - Iterate through the string from the end using a forloop and concatinating each character in the reverse variable which gives the reversed value of the string.
+
+3c - Check if the lower variable and the reverse variable are equal, if so add the array element to the res arr.
+
+4 - Return the res variable which has the palindrome strings.
+
+```
+
+### Quwstion 1f (Return median of two sorted arrays of the same size).
+
+```
+1 -
+
+```
+
+### Quwstion 1g (Remove duplicates from an array).
+
+```
+1 -
+
+```
+
+### Quwstion 1h (Rotate an array by k times).
+
+```
+1 -
+
 ```
