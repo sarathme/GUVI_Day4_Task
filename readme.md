@@ -1,3 +1,5 @@
+# Note: Logic is same for all types of functions
+
 ### Question 1a (Print odd numbers in an array).
 
 ```
@@ -73,7 +75,7 @@ two or more words.
 
 ```
 
-### Quwstion 1e (Return all the palindromes in an array).
+### Question 1e (Return all the palindromes in an array).
 
 ```
 1 - Created function and assigned it to  avariable palindrome.
@@ -92,23 +94,66 @@ two or more words.
 
 ```
 
-### Quwstion 1f (Return median of two sorted arrays of the same size).
+### Question 1f (Return median of two sorted arrays of the same size).
 
 ```
-1 -
+1 - Created a function and assigned it to avariable medianArr.
+
+2 - Initialize a variable arr3 with an empty array and another variable k with 0.
+
+3 - First for loop is for adding the elements of 1st array (arr1) to arr3 using k as the index of the element and incrementing it.
+
+4 - The second for loop is to add the 2nd array (arr2) along with the already added arr1 elements to the arr3.
+
+5 - Sorted the combined array (arr3).
+
+6 - Find the 2 middle value index.
+
+7 - Calculated the median and return the result.
 
 ```
 
-### Quwstion 1g (Remove duplicates from an array).
+### Question 1g (Remove duplicates from an array).
 
 ```
-1 -
+1 - Created a functiona and assigned it to a variable removeDuplicates.
+
+2 - Initialized a variable with an empty array (res).
+
+3 - Loop through the elements of the array.
+
+3a - Check the index of each element in the res array using indexOf method if the element is not in the res array it returns -1.
+
+3b - If it returns -1 then add that element to the res array. If not continue the loop.
+
+4 - After the loop the res contains all the unique value of the given array.
+
 
 ```
 
-### Quwstion 1h (Rotate an array by k times).
+### Question 1h (Rotate an array by k times).
+
+#### Approach
+
+1 - Rotating the last k elemnts in the array.
+
+2 - Rotating the remaining elements in the array.
+
+3 - Rotating the resultant array from the above steps.
+
+4 - This function mutates the original array.
 
 ```
-1 -
+1 - Created a function and assigned it to a variable rotateArr which accepts two
+parameters array (arr) and No. of times to be rotated (k).
 
+2 - The
+k = k % n (length of arr) is to reduce the number of rotation when k
+is larger than the length of the array/
+
+3 - The first for loop rotates the last
+k elemnts in the array. by interchanging the elements k times using the k
+variable 4 - The second for loop rotates the remaining elements in the array. 5
+- The third for loop rotates the whole resultant array. 6 - After execution of
+the loop the array will be rotated k times.
 ```
