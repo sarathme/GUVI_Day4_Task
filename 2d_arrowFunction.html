@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <title>2D - Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      console.log(
+        "-----------------------------Question 2-d--------------------------------------"
+      );
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var filterPrime = (arr) => {
+        var res = [];
+        for (var i = 0; i < arr.length; i++) {
+          var isPrime = true;
+
+          for (var j = 2; j < arr[i]; j++) {
+            if (arr[i] % j === 0) {
+              isPrime = false;
+              break;
+            }
+          }
+          if (arr[i] > 1) {
+            if (isPrime) {
+              res.push(arr[i]);
+            }
+          }
+        }
+        return res;
+      };
+      console.log(filterPrime(arr));
+    </script>
+  </body>
+</html>

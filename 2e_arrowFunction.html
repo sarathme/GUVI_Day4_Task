@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <title>2E - Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      console.log(
+        "-----------------------------Question 2-e--------------------------------------"
+      );
+
+      var palindrome = (arr) => {
+        var res = [];
+        for (var i = 0; i < arr.length; i++) {
+          var lower = arr[i].toLowerCase();
+          var reverse = "";
+          for (var j = lower.length - 1; j >= 0; j--) {
+            reverse += lower[j];
+          }
+          if (lower === reverse) {
+            res.push(arr[i]);
+          }
+        }
+        return res;
+      };
+      var arrStr = ["Level", "Ink", "Racecar"];
+      console.log(palindrome(arrStr));
+    </script>
+  </body>
+</html>

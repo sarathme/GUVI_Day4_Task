@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <title>1H - Annonymous Function</title>
+  </head>
+  <body>
+    <script>
+      console.log(
+        "-----------------------------Question 1-h--------------------------------------"
+      );
+
+      var rotateArr = function (arr, k) {
+        var n = arr.length;
+        var k = k % n;
+
+        for (var i = n - k, j = n - 1; i < j; i++, j--) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+
+        for (var i = 0, j = n - k - 1; i < j; i++, j--) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        for (var i = 0, j = n - 1; i < j; i++, j--) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      };
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      rotateArr(arr, 2);
+      console.log(arr);
+    </script>
+  </body>
+</html>

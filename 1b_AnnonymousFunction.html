@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <title>1B - Annonymous Function</title>
+  </head>
+  <body>
+    <script>
+      console.log(
+        "-----------------------------Question 1-b--------------------------------------"
+      );
+
+      var titleCaps = function (arr) {
+        for (var i = 0; i < arr.length; i++) {
+          var strArr = arr[i].split(" ");
+          if (strArr.length > 1) {
+            for (var j = 0; j < strArr.length; j++) {
+              var firstLet = strArr[j].substring(0, 1).toUpperCase();
+              strArr[j] = firstLet + strArr[j].substring(1);
+            }
+            arr[i] = strArr.join(" ");
+          } else {
+            var firstLet = arr[i].substring(0, 1).toUpperCase();
+            arr[i] = firstLet + arr[i].substring(1);
+          }
+        }
+        console.log(arr);
+      };
+      var strArr1 = ["lamkmaf kdamf", "daxfcdfa", "askdni dinvki"];
+      titleCaps(strArr1);
+    </script>
+  </body>
+</html>

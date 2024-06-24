@@ -148,12 +148,15 @@ two or more words.
 parameters array (arr) and No. of times to be rotated (k).
 
 2 - The
-k = k % n (length of arr) is to reduce the number of rotation when k
-is larger than the length of the array/
+k = k % n (length of arr) is to reduce the number of rotation when k is larger than the length of the array.
 
 3 - The first for loop rotates the last
 k elemnts in the array. by interchanging the elements k times using the k
-variable 4 - The second for loop rotates the remaining elements in the array. 5
-- The third for loop rotates the whole resultant array. 6 - After execution of
-the loop the array will be rotated k times.
+variable. 
+
+4 - The second for loop rotates the remaining elements in the array. 
+
+5- The third for loop rotates the whole resultant array. 
+
+6 - After execution of the loop the array will be rotated k times.
 ```
